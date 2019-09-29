@@ -1,0 +1,27 @@
+note over browser:
+User enters text, 
+hits "Save"
+end note 
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over server:
+Server creates new note object
+using data from POST request body
+end note
+
+server-->browser: 201 Created
+
+note over browser:
+Asynchronous JavaScript call triggered by form submit 
+event to fetch new note from server
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: Notes list
+
+note over browser:
+Re-render notes 
+end note
+
+

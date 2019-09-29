@@ -10,7 +10,7 @@ Server creates new note object
 using data from POST request body
 end note
 
-server->browser: 302 Found, Location: /notes
+server-->browser: 302 Found, Location: /notes
 
 note over browser:
 Browser reloads /notes page
